@@ -22,7 +22,7 @@ void printMatrix(int** matrix, int rows, int cols, bool showBorders = true, stri
 {
     cout << title << endl;
     if (showBorders) {
-        for (int i = 0; i < cols * 3 + 2; i++) {
+        for (int i = 0; i < cols * 3; i++) {
             cout << "*";
         }
         cout << endl;
@@ -42,14 +42,19 @@ void printMatrix(int** matrix, int rows, int cols, bool showBorders = true, stri
         cout << endl;
     }
     if (showBorders) {
-        for (int i = 0; i < cols * 3 + 2; i++) {
+        for (int i = 0; i < cols * 3; i++) {
             cout << "*";
         }
         cout << endl;
     }
 }
 
-
+void freeMatrix(int** matrix, int rows) {
+    for (int i = 0; i < rows; i++) {
+        delete[] matrix[i];
+    }
+    delete[] matrix;
+}
 
 int main() {
     int rows = 3;
@@ -57,12 +62,14 @@ int main() {
 
     int** matrix = allocateMatrix(rows, cols);
 
+    cout << "Enter grades(9):" << endl;
+
     fillMatrix(matrix, rows, cols);
+
     printMatrix(matrix, rows, cols);
     printMatrix(matrix, rows, cols, true, "Grades");
-    printMatrix(matrix, rows, cols, true, "Student grades");
+    printMatrix(matrix, rows, cols, false, "Student grades");
 
-
-
-
+    freeMatrix(matrix, rows);
+    return 0;
 }
