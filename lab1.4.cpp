@@ -18,6 +18,51 @@ void fillMatrix(int** matrix, int rows, int cols) {
     }
 }
 
+void printMatrix(int** matrix, int rows, int cols, bool showBorders = true, string title = "Matrix") 
+{
+    cout << title << endl;
+    if (showBorders) {
+        for (int i = 0; i < cols * 3 + 2; i++) {
+            cout << "*";
+        }
+        cout << endl;
+    }
+    for (int i = 0; i < rows; i++) {
+        if (showBorders) {
+            cout << "* ";
+        }
+
+        for (int j = 0; j < cols; j++) {
+            cout << matrix[i][j] << " ";
+        }
+
+        if (showBorders) {
+            cout << "*";
+        }
+        cout << endl;
+    }
+    if (showBorders) {
+        for (int i = 0; i < cols * 3 + 2; i++) {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+
+
+
 int main() {
+    int rows = 3;
+    int cols = 3;
+
+    int** matrix = allocateMatrix(rows, cols);
+
+    fillMatrix(matrix, rows, cols);
+    printMatrix(matrix, rows, cols);
+    printMatrix(matrix, rows, cols, true, "Grades");
+    printMatrix(matrix, rows, cols, true, "Student grades");
+
+
+
 
 }
