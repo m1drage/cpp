@@ -28,14 +28,38 @@ void printSafe(const SafeArray& arr) {
     }
 }
 
+void reSizeArray(SafeArray& arr, int M) {
+    int* newData = new int[M]{};
+     for (int i = 0; i < M && i < arr.size; i++) {
+        newData[i] = arr.data[i];
+     }
+     if (M < arr.size) {
+        for(int i = M; i < arr.size; i++) {
+            cout << arr.data[i] << " ";
+        }
+     }
+     delete[] arr.data;
+     arr.data = newData;
+     arr.size = M;
+}
+
 int main() {
     SafeArray myArr = createArray(5);
-    cout << myArr.size << endl;
-
-    getElement(myArr, 2) = 999;
-    cout << getElement(myArr, 2) << endl;
+    getElement(myArr, 0) = 10;
+    getElement(myArr, 1) = 20;
+    getElement(myArr, 2) = 30;
+    getElement(myArr, 3) = 40;
+    getElement(myArr, 4) = 50;
 
     printSafe(myArr);
+    cout << endl;
+
+    reSizeArray(myArr, 3);
+    cout << endl;
+
+    printSafe(myArr);
+
+    delete[] myArr.data;
 
     return 0;
 }
