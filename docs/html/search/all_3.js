@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['printarray_0',['printArray',['../lab1_8cpp.html#a4b420339986728dff0c4b7d6c657a9ec',1,'lab1.cpp']]],
-  ['process_1',['process',['../lab1_82_8cpp.html#a895bffcc41bd8e93cb0e6aa7af5c79d3',1,'lab1.2.cpp']]]
+  ['fillarray_0',['fillArray',['../lab1_8cpp.html#afa6a170da18a01e35c0a869ec25c1b5f',1,'lab1.cpp']]],
+  ['fillmatrix_1',['fillMatrix',['../lab1_84_8cpp.html#a57b3e14ecd6179a364c9e60ca2131531',1,'lab1.4.cpp']]],
+  ['freematrix_2',['freeMatrix',['../lab1_84_8cpp.html#a29b6394c95f08e982275bdcd9b919ef0',1,'lab1.4.cpp']]]
 ];

@@ -87,15 +87,20 @@ void reSizeArray(SafeArray& arr, int M) {
  * @return 0 Если программа завершилась успешно.
  */
 int main() {
+
     SafeArray myArr = createArray(5);
 
     for(int i = 0; i < myArr.size; i++) {
         myArr.data[i] = (i + 1) * 10;
     }
 
+    cout << "Massiv(1): ";
+    printSafe(myArr);
+    cout << endl;
+
     getElement(myArr, 2) = 999;
 
-    cout << "Massiv: ";
+    cout << "Massiv(2): ";
     printSafe(myArr);
     cout << endl;
 

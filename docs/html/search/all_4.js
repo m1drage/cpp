@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['swapelements_0',['swapElements',['../lab1_8cpp.html#a309a7dadd18024b1cd5bff8656f990f1',1,'lab1.cpp']]]
+  ['getelement_0',['getElement',['../lab1_83_8cpp.html#a96b5fa358374961176edf6d8e54cfe1d',1,'lab1.3.cpp']]]
 ];
