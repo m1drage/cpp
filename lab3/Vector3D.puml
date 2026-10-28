@@ -1,0 +1,38 @@
+@startuml Vector3D
+
+class Vector3D {
+    - x : double
+    - y : double
+    - z : double
+    - calls : int
+    - count : int {static}
+
+    + Vector3D()
+    + Vector3D(a : double)
+    + Vector3D(a : double, b : double, c : double)
+    + ~Vector3D()
+
+    + length() : double
+    + print() : void
+    + getCount() : int {static}
+    + getCalls() : int
+
+    + operator++() : Vector3D&
+    + operator++(int) : Vector3D
+    + operator--() : Vector3D&
+    + operator--(int) : Vector3D
+
+    + operator+=(v : Vector3D) : Vector3D&
+    + operator-=(v : Vector3D) : Vector3D&
+    + operator*=(n : double) : Vector3D&
+    + operator/=(n : double) : Vector3D&
+
+    + operator<(v : Vector3D) : bool
+    + operator>(v : Vector3D) : bool
+    + operator<=(v : Vector3D) : bool
+    + operator>=(v : Vector3D) : bool
+    + operator==(v : Vector3D) : bool
+    + operator!=(v : Vector3D) : bool
+}
+
+@enduml

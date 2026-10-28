@@ -1,0 +1,105 @@
+\doxysection{Vector3D Class Reference}
+\hypertarget{class_vector3_d}{}\label{class_vector3_d}\index{Vector3D@{Vector3D}}
+
+
+Класс трёхмерного вектора. Поддерживает арифметические операции и сравнение векторов.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_vector3_d_a701143d863e13ea98f7cabfc722efe32}\label{class_vector3_d_a701143d863e13ea98f7cabfc722efe32} 
+{\bfseries Vector3D} (double a)
+\begin{DoxyCompactList}\small\item\em Создаёт вектор с одной координатой. \end{DoxyCompactList}\item 
+\Hypertarget{class_vector3_d_a5a5e5c7f290df33617ebf8a878d4e729}\label{class_vector3_d_a5a5e5c7f290df33617ebf8a878d4e729} 
+{\bfseries Vector3D} (double a, double b, double c)
+\begin{DoxyCompactList}\small\item\em Создаёт вектор с тремя координатами. \end{DoxyCompactList}\item 
+\Hypertarget{class_vector3_d_a0b11a8d75da427b27443d8a94d0d296c}\label{class_vector3_d_a0b11a8d75da427b27443d8a94d0d296c} 
+{\bfseries Vector3D} ()
+\begin{DoxyCompactList}\small\item\em Создаёт нулевой вектор. \end{DoxyCompactList}\item 
+\Hypertarget{class_vector3_d_ae4fde5759270bf5bcf615f12f0823a8c}\label{class_vector3_d_ae4fde5759270bf5bcf615f12f0823a8c} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Vector3D} ()
+\begin{DoxyCompactList}\small\item\em Уничтожает объект и уменьшает счётчик. \end{DoxyCompactList}\item 
+\Hypertarget{class_vector3_d_a4ddb90e85e10f0f32475725cb966a5ce}\label{class_vector3_d_a4ddb90e85e10f0f32475725cb966a5ce} 
+double {\bfseries length} () const
+\begin{DoxyCompactList}\small\item\em Вычисляет длину вектора. \end{DoxyCompactList}\item 
+\Hypertarget{class_vector3_d_a00b2343c8b1acee3b21c0f42a86a212c}\label{class_vector3_d_a00b2343c8b1acee3b21c0f42a86a212c} 
+void {\bfseries print} () const
+\begin{DoxyCompactList}\small\item\em Выводит координаты вектора. \end{DoxyCompactList}\item 
+\Hypertarget{class_vector3_d_ac0976f69fab9e3d719202f630f71e5c6}\label{class_vector3_d_ac0976f69fab9e3d719202f630f71e5c6} 
+\doxymbox{\hyperlink{class_vector3_d}{Vector3D}} \& {\bfseries operator++} ()
+\begin{DoxyCompactList}\small\item\em Увеличивает координаты на 1\% (префикс). \end{DoxyCompactList}\item 
+\Hypertarget{class_vector3_d_a7917d05f04e4ff1131c2ba72436570a8}\label{class_vector3_d_a7917d05f04e4ff1131c2ba72436570a8} 
+\doxymbox{\hyperlink{class_vector3_d}{Vector3D}} {\bfseries operator++} (int)
+\begin{DoxyCompactList}\small\item\em Увеличивает координаты на 1\% (постфикс). \end{DoxyCompactList}\item 
+\Hypertarget{class_vector3_d_a9587ff5a4eed9b368a31e108846423d6}\label{class_vector3_d_a9587ff5a4eed9b368a31e108846423d6} 
+\doxymbox{\hyperlink{class_vector3_d}{Vector3D}} \& {\bfseries operator-\/-\/} ()
+\begin{DoxyCompactList}\small\item\em Уменьшает координаты на 1\% (префикс). \end{DoxyCompactList}\item 
+\Hypertarget{class_vector3_d_a3dd6a9a81367d2818fed01f181597d89}\label{class_vector3_d_a3dd6a9a81367d2818fed01f181597d89} 
+\doxymbox{\hyperlink{class_vector3_d}{Vector3D}} {\bfseries operator-\/-\/} (int)
+\begin{DoxyCompactList}\small\item\em Уменьшает координаты на 1\% (постфикс). \end{DoxyCompactList}\item 
+\Hypertarget{class_vector3_d_ac68a07709d50e05b0d4d8fc4f8e0e590}\label{class_vector3_d_ac68a07709d50e05b0d4d8fc4f8e0e590} 
+\doxymbox{\hyperlink{class_vector3_d}{Vector3D}} \& {\bfseries operator+=} (const \doxymbox{\hyperlink{class_vector3_d}{Vector3D}} \&v)
+\begin{DoxyCompactList}\small\item\em Прибавляет другой вектор. \end{DoxyCompactList}\item 
+\Hypertarget{class_vector3_d_a45262456df2503783e5163028ba25dc5}\label{class_vector3_d_a45262456df2503783e5163028ba25dc5} 
+\doxymbox{\hyperlink{class_vector3_d}{Vector3D}} \& {\bfseries operator-\/=} (const \doxymbox{\hyperlink{class_vector3_d}{Vector3D}} \&v)
+\begin{DoxyCompactList}\small\item\em Вычитает другой вектор. \end{DoxyCompactList}\item 
+\Hypertarget{class_vector3_d_aa99b112f6c02327a93e438899bc0fff0}\label{class_vector3_d_aa99b112f6c02327a93e438899bc0fff0} 
+\doxymbox{\hyperlink{class_vector3_d}{Vector3D}} \& {\bfseries operator\texorpdfstring{$\ast$}{*}=} (double n)
+\begin{DoxyCompactList}\small\item\em Умножает координаты на число. \end{DoxyCompactList}\item 
+\Hypertarget{class_vector3_d_a30aa22a7e69df813654161aa2f8bda19}\label{class_vector3_d_a30aa22a7e69df813654161aa2f8bda19} 
+\doxymbox{\hyperlink{class_vector3_d}{Vector3D}} \& {\bfseries operator/\+=} (double n)
+\begin{DoxyCompactList}\small\item\em Делит координаты на число. \end{DoxyCompactList}\item 
+\Hypertarget{class_vector3_d_af46c5169664be20911fcf81e5d957d8f}\label{class_vector3_d_af46c5169664be20911fcf81e5d957d8f} 
+bool {\bfseries operator$<$} (const \doxymbox{\hyperlink{class_vector3_d}{Vector3D}} \&v) const
+\begin{DoxyCompactList}\small\item\em Сравнивает длины векторов. \end{DoxyCompactList}\item 
+\Hypertarget{class_vector3_d_ace789538f49fb70709c5614da19250d6}\label{class_vector3_d_ace789538f49fb70709c5614da19250d6} 
+bool {\bfseries operator$>$} (const \doxymbox{\hyperlink{class_vector3_d}{Vector3D}} \&v) const
+\begin{DoxyCompactList}\small\item\em Сравнивает длины векторов. \end{DoxyCompactList}\item 
+\Hypertarget{class_vector3_d_ad25019877aa53b2a050fc9d954629a37}\label{class_vector3_d_ad25019877aa53b2a050fc9d954629a37} 
+bool {\bfseries operator$<$=} (const \doxymbox{\hyperlink{class_vector3_d}{Vector3D}} \&v) const
+\begin{DoxyCompactList}\small\item\em Проверяет, меньше ли или равна длина. \end{DoxyCompactList}\item 
+\Hypertarget{class_vector3_d_acae5d8df7f2016c442aa3ba5130d97c8}\label{class_vector3_d_acae5d8df7f2016c442aa3ba5130d97c8} 
+bool {\bfseries operator$>$=} (const \doxymbox{\hyperlink{class_vector3_d}{Vector3D}} \&v) const
+\begin{DoxyCompactList}\small\item\em Проверяет, больше ли или равна длина. \end{DoxyCompactList}\item 
+\Hypertarget{class_vector3_d_a33076e9d9a590306cd9c8620a42ad83d}\label{class_vector3_d_a33076e9d9a590306cd9c8620a42ad83d} 
+bool {\bfseries operator==} (const \doxymbox{\hyperlink{class_vector3_d}{Vector3D}} \&v) const
+\begin{DoxyCompactList}\small\item\em Проверяет равенство длин векторов. \end{DoxyCompactList}\item 
+\Hypertarget{class_vector3_d_a03c321fb1e953fab6a79e80baf7cd1a5}\label{class_vector3_d_a03c321fb1e953fab6a79e80baf7cd1a5} 
+bool {\bfseries operator!=} (const \doxymbox{\hyperlink{class_vector3_d}{Vector3D}} \&v) const
+\begin{DoxyCompactList}\small\item\em Проверяет неравенство длин векторов. \end{DoxyCompactList}\item 
+\Hypertarget{class_vector3_d_afd88e0cc57bd3dfde08e6a2a49a7f28a}\label{class_vector3_d_afd88e0cc57bd3dfde08e6a2a49a7f28a} 
+int {\bfseries get\+Calls} () const
+\begin{DoxyCompactList}\small\item\em Возвращает количество вызовов \doxylink{class_vector3_d_a4ddb90e85e10f0f32475725cb966a5ce}{length()}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_vector3_d_a324dc544505319df923f678c16fbeb63}\label{class_vector3_d_a324dc544505319df923f678c16fbeb63} 
+static int {\bfseries get\+Count} ()
+\begin{DoxyCompactList}\small\item\em Возвращает количество существующих объектов. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_vector3_d_a2ace99a5932f167b763d2d9ce2b0f376}\label{class_vector3_d_a2ace99a5932f167b763d2d9ce2b0f376} 
+\doxymbox{\hyperlink{class_vector3_d}{Vector3D}} {\bfseries operator+} (\doxymbox{\hyperlink{class_vector3_d}{Vector3D}} a, const \doxymbox{\hyperlink{class_vector3_d}{Vector3D}} \&b)
+\begin{DoxyCompactList}\small\item\em Складывает два вектора. \end{DoxyCompactList}\item 
+\Hypertarget{class_vector3_d_a8e3a926db4abb1e0b97668b4b2685be9}\label{class_vector3_d_a8e3a926db4abb1e0b97668b4b2685be9} 
+\doxymbox{\hyperlink{class_vector3_d}{Vector3D}} {\bfseries operator-\/} (\doxymbox{\hyperlink{class_vector3_d}{Vector3D}} a, const \doxymbox{\hyperlink{class_vector3_d}{Vector3D}} \&b)
+\begin{DoxyCompactList}\small\item\em Вычитает два вектора. \end{DoxyCompactList}\item 
+\Hypertarget{class_vector3_d_aff1cd3f3a29af137c99775f90180cf0d}\label{class_vector3_d_aff1cd3f3a29af137c99775f90180cf0d} 
+\doxymbox{\hyperlink{class_vector3_d}{Vector3D}} {\bfseries operator\texorpdfstring{$\ast$}{*}} (\doxymbox{\hyperlink{class_vector3_d}{Vector3D}} a, double n)
+\begin{DoxyCompactList}\small\item\em Умножает вектор на число. \end{DoxyCompactList}\item 
+\Hypertarget{class_vector3_d_a945e4ef341df9cf74ffeba0c826d3fd7}\label{class_vector3_d_a945e4ef341df9cf74ffeba0c826d3fd7} 
+\doxymbox{\hyperlink{class_vector3_d}{Vector3D}} {\bfseries operator\texorpdfstring{$\ast$}{*}} (double n, \doxymbox{\hyperlink{class_vector3_d}{Vector3D}} a)
+\begin{DoxyCompactList}\small\item\em Умножает число на вектор. \end{DoxyCompactList}\item 
+\Hypertarget{class_vector3_d_ad805d3e2b9446bce77fe13f23dc0a0b6}\label{class_vector3_d_ad805d3e2b9446bce77fe13f23dc0a0b6} 
+\doxymbox{\hyperlink{class_vector3_d}{Vector3D}} {\bfseries operator/} (\doxymbox{\hyperlink{class_vector3_d}{Vector3D}} a, double n)
+\begin{DoxyCompactList}\small\item\em Делит вектор на число. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс трёхмерного вектора. Поддерживает арифметические операции и сравнение векторов. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+Vector3\+D.\+cpp\end{DoxyCompactItemize}
