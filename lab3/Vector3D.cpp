@@ -220,3 +220,86 @@ public:
         return calls;
     }
 };
+
+// Инициализация статического поля
+int Vector3D::count = 0;
+
+int main() {
+    Vector3D a(3, 4, 0);
+    Vector3D b(1, 2, 3);
+    Vector3D c;
+
+    cout << "Vector a: ";
+    a.print();
+
+    cout << "Vector b: ";
+    b.print();
+
+    // Унарные операторы
+    cout << "\nPrefix ++: ";
+    (++a).print();
+
+    cout << "Postfix ++: ";
+    (a++).print();
+
+    cout << "Prefix --: ";
+    (--a).print();
+
+    cout << "Postfix --: ";
+    (a--).print();
+
+    // Арифметические операторы
+    cout << "\nAddition: ";
+    (a + b).print();
+
+    cout << "Subtraction: ";
+    (a - b).print();
+
+    cout << "Multiplication by 2: ";
+    (a * 2).print();
+
+    cout << "Division by 2: ";
+    (a / 2).print();
+
+    // Операторы присваивания
+    c = a;
+    c += b;
+    cout << "\n+= : ";
+    c.print();
+
+    c -= b;
+    cout << "-= : ";
+    c.print();
+
+    c *= 2;
+    cout << "*= : ";
+    c.print();
+
+    c /= 2;
+    cout << "/= : ";
+    c.print();
+
+    // Операторы сравнения
+    cout << "\na < b: " << (a < b) << endl;
+    cout << "a > b: " << (a > b) << endl;
+    cout << "a <= b: " << (a <= b) << endl;
+    cout << "a >= b: " << (a >= b) << endl;
+    cout << "a == b: " << (a == b) << endl;
+    cout << "a != b: " << (a != b) << endl;
+
+    // Проверка explicit
+    // Vector3D v = 5; /Ошибка: explicit запрещает преобразование
+    Vector3D v(5);
+    cout << "\nExplicit constructor: ";
+    v.print();
+
+    // Проверка mutable в const-объекте
+    const Vector3D fixed(3, 4, 0);
+    cout << "\nLength: " << fixed.length() << endl;
+    cout << "Length calls: " << fixed.getCalls() << endl;
+
+    // Количество созданных векторов
+    cout << "\nCreated vectors: " << Vector3D::getCount() << endl;
+
+    return 0;
+}
