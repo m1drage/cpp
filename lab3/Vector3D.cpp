@@ -99,3 +99,124 @@ public:
         return *this;
     }
 
+    // Бинарные операторы через операторы присваивания
+    friend Vector3D operator+(Vector3D a, const Vector3D& b) {
+        a += b;
+        return a;
+    }
+
+    friend Vector3D operator-(Vector3D a, const Vector3D& b) {
+        a -= b;
+        return a;
+    }
+
+    friend Vector3D operator*(Vector3D a, double n) {
+        a *= n;
+        return a;
+    }
+
+    friend Vector3D operator*(double n, Vector3D a) {
+        a *= n;
+        return a;
+    }
+
+    friend Vector3D operator/(Vector3D a, double n) {
+        a /= n;
+        return a;
+    }
+
+    // Сравнение длин векторов
+    bool operator<(const Vector3D& v) const {
+        return length() < v.length();
+    }
+
+    bool operator>(const Vector3D& v) const {
+        return length() > v.length();
+    }
+
+    bool operator<=(const Vector3D& v) const {
+        return length() <= v.length();
+    }
+
+    bool operator>=(const Vector3D& v) const {
+        return length() >= v.length();
+    }
+
+    bool operator==(const Vector3D& v) const {
+        return length() == v.length();
+    }
+
+    bool operator!=(const Vector3D& v) const {
+        return !(*this == v);
+    }
+
+    // Статический метод для подсчета векторов
+    static int getCount() {
+        return count;
+    }
+
+    // Демонстрация mutable
+    int getCalls() const {
+        return calls;
+    }
+    // Бинарные операторы через операторы присваивания
+    friend Vector3D operator+(Vector3D a, const Vector3D& b) {
+        a += b;
+        return a;
+    }
+
+    friend Vector3D operator-(Vector3D a, const Vector3D& b) {
+        a -= b;
+        return a;
+    }
+
+    friend Vector3D operator*(Vector3D a, double n) {
+        a *= n;
+        return a;
+    }
+
+    friend Vector3D operator*(double n, Vector3D a) {
+        a *= n;
+        return a;
+    }
+
+    friend Vector3D operator/(Vector3D a, double n) {
+        a /= n;
+        return a;
+    }
+
+    // Сравнение длин векторов
+    bool operator<(const Vector3D& v) const {
+        return length() < v.length();
+    }
+
+    bool operator>(const Vector3D& v) const {
+        return length() > v.length();
+    }
+
+    bool operator<=(const Vector3D& v) const {
+        return length() <= v.length();
+    }
+
+    bool operator>=(const Vector3D& v) const {
+        return length() >= v.length();
+    }
+
+    bool operator==(const Vector3D& v) const {
+        return length() == v.length();
+    }
+
+    bool operator!=(const Vector3D& v) const {
+        return !(*this == v);
+    }
+
+    // Статический метод для подсчета векторов
+    static int getCount() {
+        return count;
+    }
+
+    // Демонстрация mutable
+    int getCalls() const {
+        return calls;
+    }
+};
