@@ -1,0 +1,184 @@
+\doxysection{Lion Class Reference}
+\hypertarget{class_lion}{}\label{class_lion}\index{Lion@{Lion}}
+
+
+Класс льва.  
+
+
+
+
+{\ttfamily \+\#include $<$Lion.\+h$>$}
+
+Inheritance diagram for Lion:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_lion}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_lion_ae73e154d18be505381a4abc244e6a9d3}\label{class_lion_ae73e154d18be505381a4abc244e6a9d3} 
+{\bfseries Lion} (const std::\+string \&name, int age, int gestation\+Period, bool nursing)
+\begin{DoxyCompactList}\small\item\em Создаёт льва. \end{DoxyCompactList}\item 
+\Hypertarget{class_lion_a5c8e6767b21920eb37918dcd8b32cde6}\label{class_lion_a5c8e6767b21920eb37918dcd8b32cde6} 
+{\bfseries Lion} (const \doxymbox{\hyperlink{class_lion}{Lion}} \&other)
+\begin{DoxyCompactList}\small\item\em Конструктор копирования. \end{DoxyCompactList}\item 
+\Hypertarget{class_lion_a2761be60f31f46a7e5586238e9bf9fdf}\label{class_lion_a2761be60f31f46a7e5586238e9bf9fdf} 
+\doxymbox{\hyperlink{class_lion}{Lion}} \& {\bfseries operator=} (const \doxymbox{\hyperlink{class_lion}{Lion}} \&other)
+\begin{DoxyCompactList}\small\item\em Оператор копирующего присваивания. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_lion_ad63a26bb0f8fb0342aebce1feb0004a7}{make\+Sound}} () const override
+\begin{DoxyCompactList}\small\item\em Выводит звук льва. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_lion_af5a9fa81934f1e20a1dc53ee95222151}{move}} () const override
+\begin{DoxyCompactList}\small\item\em Выводит способ передвижения льва. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_lion_ae7ea98afe806ad29a877b709144bea78}{get\+Species}} () const override
+\begin{DoxyCompactList}\small\item\em Возвращает название вида. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_lion_a88c4d8f7e489af3a8cfe1431446247d5}{show\+Behavior}} () const override
+\begin{DoxyCompactList}\small\item\em Выводит описание поведения льва. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_mammal}{Mammal}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Mammal} (const std::\+string \&name, const std::\+string \&species, int age, int gestation\+Period, bool nursing, \doxymbox{\hyperlink{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48}{Kind}} kind)
+\begin{DoxyCompactList}\small\item\em Создаёт млекопитающее. \end{DoxyCompactList}\item 
+{\bfseries Mammal} (const \doxymbox{\hyperlink{class_mammal}{Mammal}} \&other)
+\begin{DoxyCompactList}\small\item\em Конструктор копирования. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_mammal}{Mammal}} \& {\bfseries operator=} (const \doxymbox{\hyperlink{class_mammal}{Mammal}} \&other)
+\begin{DoxyCompactList}\small\item\em Оператор копирующего присваивания. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Mammal} () override=default
+\begin{DoxyCompactList}\small\item\em Деструктор млекопитающего. \end{DoxyCompactList}\item 
+int {\bfseries get\+Gestation\+Period} () const noexcept
+\begin{DoxyCompactList}\small\item\em Возвращает срок беременности. \end{DoxyCompactList}\item 
+bool {\bfseries is\+Nursing} () const noexcept
+\begin{DoxyCompactList}\small\item\em Проверяет, кормит ли животное детёнышей. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_mammal_aa11339dc0a0779f343dfb6da421a8f2d}{show\+Behavior}} () const override
+\begin{DoxyCompactList}\small\item\em Выводит особенности поведения млекопитающего. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_animal}{Animal}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Animal} (const std::\+string \&name, const std::\+string \&species, int age, \doxymbox{\hyperlink{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48}{Kind}} kind)
+\begin{DoxyCompactList}\small\item\em Создаёт животное с заданными параметрами. \end{DoxyCompactList}\item 
+{\bfseries Animal} (const \doxymbox{\hyperlink{class_animal}{Animal}} \&other)
+\begin{DoxyCompactList}\small\item\em Конструктор копирования. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_animal}{Animal}} \& {\bfseries operator=} (const \doxymbox{\hyperlink{class_animal}{Animal}} \&other)
+\begin{DoxyCompactList}\small\item\em Оператор копирующего присваивания. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Animal} ()
+\begin{DoxyCompactList}\small\item\em Виртуальный деструктор. \end{DoxyCompactList}\item 
+const std::\+string \& {\bfseries get\+Name} () const noexcept
+\item 
+int {\bfseries get\+Age} () const noexcept
+\item 
+\doxymbox{\hyperlink{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48}{Kind}} {\bfseries get\+Kind} () const noexcept
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \doxymbox{\hyperlink{class_animal}{Animal}}}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48}\label{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48} 
+enum class \doxymbox{\hyperlink{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48}{Kind}} \{ \newline
+{\bfseries Lion} = 0
+, {\bfseries Elephant} = 1
+, {\bfseries Parrot} = 2
+, {\bfseries Bat} = 3
+, \newline
+{\bfseries Count} = 4
+ \}
+\begin{DoxyCompactList}\small\item\em Перечисление типов животных. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \doxymbox{\hyperlink{class_animal}{Animal}}}
+\begin{DoxyCompactItemize}
+\item 
+static std::\+size\+\_\+t {\bfseries get\+Total\+Count} () noexcept
+\item 
+static std::\+size\+\_\+t {\bfseries get\+Count\+By\+Type} (\doxymbox{\hyperlink{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48}{Kind}} kind) noexcept
+\item 
+static \doxymbox{\hyperlink{class_animal}{Animal}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Oldest\+Animal} () noexcept
+\begin{DoxyCompactList}\small\item\em Находит самое старое живое животное. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_mammal}{Mammal}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries gestation\+Period\_}
+\item 
+bool {\bfseries nursing\_}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_animal}{Animal}}}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string {\bfseries name\_}
+\item 
+std::\+string {\bfseries species\_}
+\item 
+int {\bfseries age\_}
+\item 
+\doxymbox{\hyperlink{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48}{Kind}} {\bfseries kind\_}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс льва. 
+
+Наследуется от \doxylink{class_mammal}{Mammal} и реализует поведение льва. 
+
+\label{class_lion_doc-func-members}
+\Hypertarget{class_lion_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_lion_ae7ea98afe806ad29a877b709144bea78}\index{Lion@{Lion}!getSpecies@{getSpecies}}
+\index{getSpecies@{getSpecies}!Lion@{Lion}}
+\doxysubsubsection{\texorpdfstring{getSpecies()}{getSpecies()}}
+{\footnotesize\ttfamily \label{class_lion_ae7ea98afe806ad29a877b709144bea78} 
+std::\+string Lion::\+get\+Species (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Возвращает название вида. 
+
+
+
+Implements \doxymbox{\hyperlink{class_animal_a130e97684e416219aa83b9a2ca0e80a5}{Animal}}.
+
+\Hypertarget{class_lion_ad63a26bb0f8fb0342aebce1feb0004a7}\index{Lion@{Lion}!makeSound@{makeSound}}
+\index{makeSound@{makeSound}!Lion@{Lion}}
+\doxysubsubsection{\texorpdfstring{makeSound()}{makeSound()}}
+{\footnotesize\ttfamily \label{class_lion_ad63a26bb0f8fb0342aebce1feb0004a7} 
+void Lion::\+make\+Sound (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Выводит звук льва. 
+
+
+
+Implements \doxymbox{\hyperlink{class_animal_a79362ff45b2da42d588d38b7674f1a59}{Animal}}.
+
+\Hypertarget{class_lion_af5a9fa81934f1e20a1dc53ee95222151}\index{Lion@{Lion}!move@{move}}
+\index{move@{move}!Lion@{Lion}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily \label{class_lion_af5a9fa81934f1e20a1dc53ee95222151} 
+void Lion::\+move (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Выводит способ передвижения льва. 
+
+
+
+Implements \doxymbox{\hyperlink{class_animal_a9cc0fb4fa12f3090240b948606bb0e42}{Animal}}.
+
+\Hypertarget{class_lion_a88c4d8f7e489af3a8cfe1431446247d5}\index{Lion@{Lion}!showBehavior@{showBehavior}}
+\index{showBehavior@{showBehavior}!Lion@{Lion}}
+\doxysubsubsection{\texorpdfstring{showBehavior()}{showBehavior()}}
+{\footnotesize\ttfamily \label{class_lion_a88c4d8f7e489af3a8cfe1431446247d5} 
+void Lion::\+show\+Behavior (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Выводит описание поведения льва. 
+
+
+
+Reimplemented from \doxymbox{\hyperlink{class_animal_a904f00002708998c540fe3f87e611ef2}{Animal}}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Lion.\+h\item 
+\doxymbox{\hyperlink{_lion_8cpp}{Lion.\+cpp}}\end{DoxyCompactItemize}

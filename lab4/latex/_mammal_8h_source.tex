@@ -1,0 +1,24 @@
+\doxysection{Mammal.\+h}
+\hypertarget{_mammal_8h_source}{}\label{_mammal_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Animal.h"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_mammal_ab40bad92906c48341edf3a51e76cc20a}{Mammal}}\ :\ \textcolor{keyword}{virtual}\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_animal_a230a370bcfacff052c5f75e99bad9aaa}{Animal}}\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \doxymbox{\hyperlink{class_mammal_ab40bad92906c48341edf3a51e76cc20a}{Mammal}}(\textcolor{keyword}{const}\ std::string\&\ name,\ \textcolor{keyword}{const}\ std::string\&\ species,\ \textcolor{keywordtype}{int}\ age,}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ gestationPeriod,\ \textcolor{keywordtype}{bool}\ nursing,\ \doxymbox{\hyperlink{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48}{Kind}}\ kind);}
+\DoxyCodeLine{00016\ \ \ \ \ \doxymbox{\hyperlink{class_mammal_ab40bad92906c48341edf3a51e76cc20a}{Mammal}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_mammal_ab40bad92906c48341edf3a51e76cc20a}{Mammal}}\&\ other);}
+\DoxyCodeLine{00018\ \ \ \ \ \doxymbox{\hyperlink{class_mammal_ab40bad92906c48341edf3a51e76cc20a}{Mammal}}\&\ \doxymbox{\hyperlink{class_mammal_a1297b43ffacc44f4996be7619eb5d5bd}{operator=}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_mammal_ab40bad92906c48341edf3a51e76cc20a}{Mammal}}\&\ other);}
+\DoxyCodeLine{00020\ \ \ \ \ \doxymbox{\hyperlink{class_mammal_af736db53d6e35bb027ef6cb7605c86e7}{\string~Mammal}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_mammal_a7e85b813921dfab176957d6c40cb84b5}{getGestationPeriod}}()\ const\ noexcept;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_mammal_a12e43c43b6c67fdfdbc89fda55d70557}{isNursing}}()\ const\ noexcept;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_mammal_aa11339dc0a0779f343dfb6da421a8f2d}{showBehavior}}()\ const\ override;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ protected:}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ gestationPeriod\_;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{bool}\ nursing\_;}
+\DoxyCodeLine{00031\ \};}
+
+\end{DoxyCode}

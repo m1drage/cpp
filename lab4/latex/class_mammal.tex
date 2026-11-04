@@ -1,0 +1,136 @@
+\doxysection{Mammal Class Reference}
+\hypertarget{class_mammal}{}\label{class_mammal}\index{Mammal@{Mammal}}
+
+
+Класс млекопитающих.  
+
+
+
+
+{\ttfamily \+\#include $<$Mammal.\+h$>$}
+
+Inheritance diagram for Mammal:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_mammal}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_mammal_ab40bad92906c48341edf3a51e76cc20a}\label{class_mammal_ab40bad92906c48341edf3a51e76cc20a} 
+{\bfseries Mammal} (const std::\+string \&name, const std::\+string \&species, int age, int gestation\+Period, bool nursing, \doxymbox{\hyperlink{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48}{Kind}} kind)
+\begin{DoxyCompactList}\small\item\em Создаёт млекопитающее. \end{DoxyCompactList}\item 
+\Hypertarget{class_mammal_a4317ecabf1529ca1a40c7b86108a2026}\label{class_mammal_a4317ecabf1529ca1a40c7b86108a2026} 
+{\bfseries Mammal} (const \doxymbox{\hyperlink{class_mammal}{Mammal}} \&other)
+\begin{DoxyCompactList}\small\item\em Конструктор копирования. \end{DoxyCompactList}\item 
+\Hypertarget{class_mammal_a1297b43ffacc44f4996be7619eb5d5bd}\label{class_mammal_a1297b43ffacc44f4996be7619eb5d5bd} 
+\doxymbox{\hyperlink{class_mammal}{Mammal}} \& {\bfseries operator=} (const \doxymbox{\hyperlink{class_mammal}{Mammal}} \&other)
+\begin{DoxyCompactList}\small\item\em Оператор копирующего присваивания. \end{DoxyCompactList}\item 
+\Hypertarget{class_mammal_af736db53d6e35bb027ef6cb7605c86e7}\label{class_mammal_af736db53d6e35bb027ef6cb7605c86e7} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Mammal} () override=default
+\begin{DoxyCompactList}\small\item\em Деструктор млекопитающего. \end{DoxyCompactList}\item 
+\Hypertarget{class_mammal_a7e85b813921dfab176957d6c40cb84b5}\label{class_mammal_a7e85b813921dfab176957d6c40cb84b5} 
+int {\bfseries get\+Gestation\+Period} () const noexcept
+\begin{DoxyCompactList}\small\item\em Возвращает срок беременности. \end{DoxyCompactList}\item 
+\Hypertarget{class_mammal_a12e43c43b6c67fdfdbc89fda55d70557}\label{class_mammal_a12e43c43b6c67fdfdbc89fda55d70557} 
+bool {\bfseries is\+Nursing} () const noexcept
+\begin{DoxyCompactList}\small\item\em Проверяет, кормит ли животное детёнышей. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_mammal_aa11339dc0a0779f343dfb6da421a8f2d}{show\+Behavior}} () const override
+\begin{DoxyCompactList}\small\item\em Выводит особенности поведения млекопитающего. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_animal}{Animal}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Animal} (const std::\+string \&name, const std::\+string \&species, int age, \doxymbox{\hyperlink{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48}{Kind}} kind)
+\begin{DoxyCompactList}\small\item\em Создаёт животное с заданными параметрами. \end{DoxyCompactList}\item 
+{\bfseries Animal} (const \doxymbox{\hyperlink{class_animal}{Animal}} \&other)
+\begin{DoxyCompactList}\small\item\em Конструктор копирования. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_animal}{Animal}} \& {\bfseries operator=} (const \doxymbox{\hyperlink{class_animal}{Animal}} \&other)
+\begin{DoxyCompactList}\small\item\em Оператор копирующего присваивания. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Animal} ()
+\begin{DoxyCompactList}\small\item\em Виртуальный деструктор. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_animal_a79362ff45b2da42d588d38b7674f1a59}{make\+Sound}} () const =0
+\begin{DoxyCompactList}\small\item\em Издаёт звук животного. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_animal_a9cc0fb4fa12f3090240b948606bb0e42}{move}} () const =0
+\begin{DoxyCompactList}\small\item\em Описывает передвижение животного. \end{DoxyCompactList}\item 
+virtual std::\+string \doxymbox{\hyperlink{class_animal_a130e97684e416219aa83b9a2ca0e80a5}{get\+Species}} () const =0
+\begin{DoxyCompactList}\small\item\em Возвращает название вида. \end{DoxyCompactList}\item 
+const std::\+string \& {\bfseries get\+Name} () const noexcept
+\item 
+int {\bfseries get\+Age} () const noexcept
+\item 
+\doxymbox{\hyperlink{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48}{Kind}} {\bfseries get\+Kind} () const noexcept
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_mammal_a9c3db6446ffd3eecc741f055667c5801}\label{class_mammal_a9c3db6446ffd3eecc741f055667c5801} 
+int {\bfseries gestation\+Period\_}
+\item 
+\Hypertarget{class_mammal_a39075c60899c88ebe287073112406071}\label{class_mammal_a39075c60899c88ebe287073112406071} 
+bool {\bfseries nursing\_}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_animal}{Animal}}}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string {\bfseries name\_}
+\item 
+std::\+string {\bfseries species\_}
+\item 
+int {\bfseries age\_}
+\item 
+\doxymbox{\hyperlink{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48}{Kind}} {\bfseries kind\_}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \doxymbox{\hyperlink{class_animal}{Animal}}}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48}\label{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48} 
+enum class \doxymbox{\hyperlink{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48}{Kind}} \{ \newline
+{\bfseries Lion} = 0
+, {\bfseries Elephant} = 1
+, {\bfseries Parrot} = 2
+, {\bfseries Bat} = 3
+, \newline
+{\bfseries Count} = 4
+ \}
+\begin{DoxyCompactList}\small\item\em Перечисление типов животных. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \doxymbox{\hyperlink{class_animal}{Animal}}}
+\begin{DoxyCompactItemize}
+\item 
+static std::\+size\+\_\+t {\bfseries get\+Total\+Count} () noexcept
+\item 
+static std::\+size\+\_\+t {\bfseries get\+Count\+By\+Type} (\doxymbox{\hyperlink{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48}{Kind}} kind) noexcept
+\item 
+static \doxymbox{\hyperlink{class_animal}{Animal}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Oldest\+Animal} () noexcept
+\begin{DoxyCompactList}\small\item\em Находит самое старое живое животное. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс млекопитающих. 
+
+Наследуется от \doxylink{class_animal}{Animal} и содержит дополнительные характеристики млекопитающих. 
+
+\label{class_mammal_doc-func-members}
+\Hypertarget{class_mammal_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mammal_aa11339dc0a0779f343dfb6da421a8f2d}\index{Mammal@{Mammal}!showBehavior@{showBehavior}}
+\index{showBehavior@{showBehavior}!Mammal@{Mammal}}
+\doxysubsubsection{\texorpdfstring{showBehavior()}{showBehavior()}}
+{\footnotesize\ttfamily \label{class_mammal_aa11339dc0a0779f343dfb6da421a8f2d} 
+void Mammal::\+show\+Behavior (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Выводит особенности поведения млекопитающего. 
+
+
+
+Reimplemented from \doxymbox{\hyperlink{class_animal_a904f00002708998c540fe3f87e611ef2}{Animal}}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Mammal.\+h\item 
+\doxymbox{\hyperlink{_mammal_8cpp}{Mammal.\+cpp}}\end{DoxyCompactItemize}

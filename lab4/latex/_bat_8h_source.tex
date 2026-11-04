@@ -1,0 +1,23 @@
+\doxysection{Bat.\+h}
+\hypertarget{_bat_8h_source}{}\label{_bat_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Mammal.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Bird.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ Летучая\ мышь\ одновременно\ является\ млекопитающим\ и\ летающим\ существом.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ Animal\ виртуально\ наследуется\ в\ Mammal\ и\ Bird,\ поэтому\ подобъект\ Animal\ один.}}
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_bat_a5217c7d7c0af1191c163f073cf9493b6}{Bat}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_mammal_ab40bad92906c48341edf3a51e76cc20a}{Mammal}},\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_bird_a1347cfcd12ccf8995ecd47782ac975b0}{Bird}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \doxymbox{\hyperlink{class_bat_a5217c7d7c0af1191c163f073cf9493b6}{Bat}}(\textcolor{keyword}{const}\ std::string\&\ name,\ \textcolor{keywordtype}{int}\ age,\ \textcolor{keywordtype}{int}\ gestationPeriod,\ \textcolor{keywordtype}{bool}\ nursing,}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ wingspan,\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_bird_ad611db440543349909c5c1d6212d0646}{canFly}});}
+\DoxyCodeLine{00019\ \ \ \ \ \doxymbox{\hyperlink{class_bat_a5217c7d7c0af1191c163f073cf9493b6}{Bat}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_bat_a5217c7d7c0af1191c163f073cf9493b6}{Bat}}\&\ other);}
+\DoxyCodeLine{00021\ \ \ \ \ \doxymbox{\hyperlink{class_bat_a5217c7d7c0af1191c163f073cf9493b6}{Bat}}\&\ \doxymbox{\hyperlink{class_bat_a11dfad6ca36efd805c98ba1284874fe2}{operator=}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_bat_a5217c7d7c0af1191c163f073cf9493b6}{Bat}}\&\ other);}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_bat_a2ce3a84d17a697504838a6b9d82ae24a}{makeSound}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_bat_a8b2ed7e97252a4a393f9004b23450111}{move}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00027\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_bat_ab82312dc6a219aa91f76c7c2dc8c8e6c}{getSpecies}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_bat_a0e719128543df14b941f534b556b5d34}{showBehavior}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00030\ \};}
+
+\end{DoxyCode}

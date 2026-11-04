@@ -1,0 +1,167 @@
+\doxysection{Animal Class Reference}
+\hypertarget{class_animal}{}\label{class_animal}\index{Animal@{Animal}}
+
+
+Абстрактный базовый класс животного.  
+
+
+
+
+{\ttfamily \+\#include $<$Animal.\+h$>$}
+
+Inheritance diagram for Animal:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_animal}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48}\label{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48} 
+enum class \doxymbox{\hyperlink{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48}{Kind}} \{ \newline
+{\bfseries Lion} = 0
+, {\bfseries Elephant} = 1
+, {\bfseries Parrot} = 2
+, {\bfseries Bat} = 3
+, \newline
+{\bfseries Count} = 4
+ \}
+\begin{DoxyCompactList}\small\item\em Перечисление типов животных. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_animal_a230a370bcfacff052c5f75e99bad9aaa}\label{class_animal_a230a370bcfacff052c5f75e99bad9aaa} 
+{\bfseries Animal} (const std::\+string \&name, const std::\+string \&species, int age, \doxymbox{\hyperlink{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48}{Kind}} kind)
+\begin{DoxyCompactList}\small\item\em Создаёт животное с заданными параметрами. \end{DoxyCompactList}\item 
+\Hypertarget{class_animal_ac9cb0456a22b938ef4a6adf4a371f778}\label{class_animal_ac9cb0456a22b938ef4a6adf4a371f778} 
+{\bfseries Animal} (const \doxymbox{\hyperlink{class_animal}{Animal}} \&other)
+\begin{DoxyCompactList}\small\item\em Конструктор копирования. \end{DoxyCompactList}\item 
+\Hypertarget{class_animal_aa877ca8e4c0747f5794614e7b35c2fa5}\label{class_animal_aa877ca8e4c0747f5794614e7b35c2fa5} 
+\doxymbox{\hyperlink{class_animal}{Animal}} \& {\bfseries operator=} (const \doxymbox{\hyperlink{class_animal}{Animal}} \&other)
+\begin{DoxyCompactList}\small\item\em Оператор копирующего присваивания. \end{DoxyCompactList}\item 
+\Hypertarget{class_animal_a476af25adde5f0dfa688129c8f86fa5c}\label{class_animal_a476af25adde5f0dfa688129c8f86fa5c} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Animal} ()
+\begin{DoxyCompactList}\small\item\em Виртуальный деструктор. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_animal_a79362ff45b2da42d588d38b7674f1a59}{make\+Sound}} () const =0
+\begin{DoxyCompactList}\small\item\em Издаёт звук животного. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_animal_a9cc0fb4fa12f3090240b948606bb0e42}{move}} () const =0
+\begin{DoxyCompactList}\small\item\em Описывает передвижение животного. \end{DoxyCompactList}\item 
+virtual std::\+string \doxymbox{\hyperlink{class_animal_a130e97684e416219aa83b9a2ca0e80a5}{get\+Species}} () const =0
+\begin{DoxyCompactList}\small\item\em Возвращает название вида. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_animal_a904f00002708998c540fe3f87e611ef2}{show\+Behavior}} () const
+\begin{DoxyCompactList}\small\item\em Выводит описание поведения животного. \end{DoxyCompactList}\item 
+\Hypertarget{class_animal_a80b728acc615212a295a6c467d57f544}\label{class_animal_a80b728acc615212a295a6c467d57f544} 
+const std::\+string \& {\bfseries get\+Name} () const noexcept
+\item 
+\Hypertarget{class_animal_aceedb47df0f99aef59aa4dd0bf34f350}\label{class_animal_aceedb47df0f99aef59aa4dd0bf34f350} 
+int {\bfseries get\+Age} () const noexcept
+\item 
+\Hypertarget{class_animal_a8384d3fd8ab31c2e8a1693e17c475b99}\label{class_animal_a8384d3fd8ab31c2e8a1693e17c475b99} 
+\doxymbox{\hyperlink{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48}{Kind}} {\bfseries get\+Kind} () const noexcept
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_animal_a40e4923f4bdf984ef1273436a5b8f8a5}\label{class_animal_a40e4923f4bdf984ef1273436a5b8f8a5} 
+static std::\+size\+\_\+t {\bfseries get\+Total\+Count} () noexcept
+\item 
+\Hypertarget{class_animal_a35771427d1261be07df2c8931d09ee3a}\label{class_animal_a35771427d1261be07df2c8931d09ee3a} 
+static std::\+size\+\_\+t {\bfseries get\+Count\+By\+Type} (\doxymbox{\hyperlink{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48}{Kind}} kind) noexcept
+\item 
+\Hypertarget{class_animal_a1ae22c0990f701d8597ad2118f28f8f3}\label{class_animal_a1ae22c0990f701d8597ad2118f28f8f3} 
+static \doxymbox{\hyperlink{class_animal}{Animal}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Oldest\+Animal} () noexcept
+\begin{DoxyCompactList}\small\item\em Находит самое старое живое животное. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_animal_afb75ffe6a78f42382bfe568e27245f4f}\label{class_animal_afb75ffe6a78f42382bfe568e27245f4f} 
+std::\+string {\bfseries name\_}
+\item 
+\Hypertarget{class_animal_adabaaf9a6e5fb63fc1fb5b311da29c7f}\label{class_animal_adabaaf9a6e5fb63fc1fb5b311da29c7f} 
+std::\+string {\bfseries species\_}
+\item 
+\Hypertarget{class_animal_a945c1b7a1572add9c3ecd8a279c0c0c9}\label{class_animal_a945c1b7a1572add9c3ecd8a279c0c0c9} 
+int {\bfseries age\_}
+\item 
+\Hypertarget{class_animal_a89b58c1d00a33a11e685f172dc40e8f2}\label{class_animal_a89b58c1d00a33a11e685f172dc40e8f2} 
+\doxymbox{\hyperlink{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48}{Kind}} {\bfseries kind\_}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_animal_abab55b113dd55b3dff0a20c3bb0971aa}\label{class_animal_abab55b113dd55b3dff0a20c3bb0971aa} 
+std::\+ostream \& {\bfseries operator$<$$<$} (std::\+ostream \&out, const \doxymbox{\hyperlink{class_animal}{Animal}} \&animal)
+\begin{DoxyCompactList}\small\item\em Перегружает оператор вывода информации о животном. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Абстрактный базовый класс животного. 
+
+Содержит общие данные и методы для всех животных. Ведёт подсчёт общего количества животных и количества по типам. 
+
+\label{class_animal_doc-func-members}
+\Hypertarget{class_animal_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_animal_a130e97684e416219aa83b9a2ca0e80a5}\index{Animal@{Animal}!getSpecies@{getSpecies}}
+\index{getSpecies@{getSpecies}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{getSpecies()}{getSpecies()}}
+{\footnotesize\ttfamily \label{class_animal_a130e97684e416219aa83b9a2ca0e80a5} 
+virtual std::\+string Animal::\+get\+Species (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Возвращает название вида. 
+
+
+
+Implemented in \doxymbox{\hyperlink{class_bat_ab82312dc6a219aa91f76c7c2dc8c8e6c}{Bat}}, \doxymbox{\hyperlink{class_elephant_a7a10b706d319b4580c3743fab66e844b}{Elephant}}, \doxymbox{\hyperlink{class_lion_ae7ea98afe806ad29a877b709144bea78}{Lion}}, and \doxymbox{\hyperlink{class_parrot_ad68bf45b4f75b545aa58e0d57192adf4}{Parrot}}.
+
+\Hypertarget{class_animal_a79362ff45b2da42d588d38b7674f1a59}\index{Animal@{Animal}!makeSound@{makeSound}}
+\index{makeSound@{makeSound}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{makeSound()}{makeSound()}}
+{\footnotesize\ttfamily \label{class_animal_a79362ff45b2da42d588d38b7674f1a59} 
+virtual void Animal::\+make\+Sound (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Издаёт звук животного. 
+
+
+
+Implemented in \doxymbox{\hyperlink{class_bat_a2ce3a84d17a697504838a6b9d82ae24a}{Bat}}, \doxymbox{\hyperlink{class_elephant_a0cc67893a1870a406da48fb2a5f51553}{Elephant}}, \doxymbox{\hyperlink{class_lion_ad63a26bb0f8fb0342aebce1feb0004a7}{Lion}}, and \doxymbox{\hyperlink{class_parrot_a9ae4bb0ca80418b363477968a2cf556c}{Parrot}}.
+
+\Hypertarget{class_animal_a9cc0fb4fa12f3090240b948606bb0e42}\index{Animal@{Animal}!move@{move}}
+\index{move@{move}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily \label{class_animal_a9cc0fb4fa12f3090240b948606bb0e42} 
+virtual void Animal::\+move (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Описывает передвижение животного. 
+
+
+
+Implemented in \doxymbox{\hyperlink{class_bat_a8b2ed7e97252a4a393f9004b23450111}{Bat}}, \doxymbox{\hyperlink{class_elephant_a0d6d40110ecba280666be6dc2adb147d}{Elephant}}, \doxymbox{\hyperlink{class_lion_af5a9fa81934f1e20a1dc53ee95222151}{Lion}}, and \doxymbox{\hyperlink{class_parrot_ad33436c6b842d8a5ee561925c092233c}{Parrot}}.
+
+\Hypertarget{class_animal_a904f00002708998c540fe3f87e611ef2}\index{Animal@{Animal}!showBehavior@{showBehavior}}
+\index{showBehavior@{showBehavior}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{showBehavior()}{showBehavior()}}
+{\footnotesize\ttfamily \label{class_animal_a904f00002708998c540fe3f87e611ef2} 
+void Animal::\+show\+Behavior (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Выводит описание поведения животного. 
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_bat_a0e719128543df14b941f534b556b5d34}{Bat}}, \doxymbox{\hyperlink{class_bird_a39d9b1852efe483a2e177fe50ed24a8c}{Bird}}, \doxymbox{\hyperlink{class_elephant_ab21663bb175558dffef88187855062a7}{Elephant}}, \doxymbox{\hyperlink{class_lion_a88c4d8f7e489af3a8cfe1431446247d5}{Lion}}, \doxymbox{\hyperlink{class_mammal_aa11339dc0a0779f343dfb6da421a8f2d}{Mammal}}, and \doxymbox{\hyperlink{class_parrot_a2bb1a9dec4173a753c7af0b6d9efa658}{Parrot}}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Animal.\+h\item 
+\doxymbox{\hyperlink{_animal_8cpp}{Animal.\+cpp}}\end{DoxyCompactItemize}

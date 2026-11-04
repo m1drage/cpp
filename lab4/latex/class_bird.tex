@@ -1,0 +1,140 @@
+\doxysection{Bird Class Reference}
+\hypertarget{class_bird}{}\label{class_bird}\index{Bird@{Bird}}
+
+
+Класс птиц.  
+
+
+
+
+{\ttfamily \+\#include $<$Bird.\+h$>$}
+
+Inheritance diagram for Bird:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_bird}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bird_a1347cfcd12ccf8995ecd47782ac975b0}\label{class_bird_a1347cfcd12ccf8995ecd47782ac975b0} 
+{\bfseries Bird} (const std::\+string \&name, const std::\+string \&species, int age, double wingspan, bool can\+Fly, \doxymbox{\hyperlink{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48}{Kind}} kind)
+\begin{DoxyCompactList}\small\item\em Создаёт птицу с заданными характеристиками. \end{DoxyCompactList}\item 
+\Hypertarget{class_bird_af3cfa66b5a3777d7b1a2580145807e1a}\label{class_bird_af3cfa66b5a3777d7b1a2580145807e1a} 
+{\bfseries Bird} (const \doxymbox{\hyperlink{class_bird}{Bird}} \&other)
+\begin{DoxyCompactList}\small\item\em Конструктор копирования. \end{DoxyCompactList}\item 
+\Hypertarget{class_bird_aa638c4fa97de46f48568810255635647}\label{class_bird_aa638c4fa97de46f48568810255635647} 
+\doxymbox{\hyperlink{class_bird}{Bird}} \& {\bfseries operator=} (const \doxymbox{\hyperlink{class_bird}{Bird}} \&other)
+\begin{DoxyCompactList}\small\item\em Оператор копирующего присваивания. \end{DoxyCompactList}\item 
+\Hypertarget{class_bird_a0c14e6577d5f2a3625e92311a74628d4}\label{class_bird_a0c14e6577d5f2a3625e92311a74628d4} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Bird} () override=default
+\begin{DoxyCompactList}\small\item\em Виртуальный деструктор. \end{DoxyCompactList}\item 
+\Hypertarget{class_bird_ad9d0891a2c4bb57146578f1df42383e9}\label{class_bird_ad9d0891a2c4bb57146578f1df42383e9} 
+double {\bfseries get\+Wingspan} () const noexcept
+\begin{DoxyCompactList}\small\item\em Возвращает размах крыльев. \end{DoxyCompactList}\item 
+\Hypertarget{class_bird_ad611db440543349909c5c1d6212d0646}\label{class_bird_ad611db440543349909c5c1d6212d0646} 
+bool {\bfseries can\+Fly} () const noexcept
+\begin{DoxyCompactList}\small\item\em Проверяет способность птицы летать. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_bird_a39d9b1852efe483a2e177fe50ed24a8c}{show\+Behavior}} () const override
+\begin{DoxyCompactList}\small\item\em Выводит особенности поведения птицы. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_animal}{Animal}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Animal} (const std::\+string \&name, const std::\+string \&species, int age, \doxymbox{\hyperlink{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48}{Kind}} kind)
+\begin{DoxyCompactList}\small\item\em Создаёт животное с заданными параметрами. \end{DoxyCompactList}\item 
+{\bfseries Animal} (const \doxymbox{\hyperlink{class_animal}{Animal}} \&other)
+\begin{DoxyCompactList}\small\item\em Конструктор копирования. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_animal}{Animal}} \& {\bfseries operator=} (const \doxymbox{\hyperlink{class_animal}{Animal}} \&other)
+\begin{DoxyCompactList}\small\item\em Оператор копирующего присваивания. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Animal} ()
+\begin{DoxyCompactList}\small\item\em Виртуальный деструктор. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_animal_a79362ff45b2da42d588d38b7674f1a59}{make\+Sound}} () const =0
+\begin{DoxyCompactList}\small\item\em Издаёт звук животного. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_animal_a9cc0fb4fa12f3090240b948606bb0e42}{move}} () const =0
+\begin{DoxyCompactList}\small\item\em Описывает передвижение животного. \end{DoxyCompactList}\item 
+virtual std::\+string \doxymbox{\hyperlink{class_animal_a130e97684e416219aa83b9a2ca0e80a5}{get\+Species}} () const =0
+\begin{DoxyCompactList}\small\item\em Возвращает название вида. \end{DoxyCompactList}\item 
+const std::\+string \& {\bfseries get\+Name} () const noexcept
+\item 
+int {\bfseries get\+Age} () const noexcept
+\item 
+\doxymbox{\hyperlink{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48}{Kind}} {\bfseries get\+Kind} () const noexcept
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bird_a870e796a19d7688ba5a9e0f9a03bafcd}\label{class_bird_a870e796a19d7688ba5a9e0f9a03bafcd} 
+double {\bfseries wingspan\_}
+\item 
+\Hypertarget{class_bird_a9e32af9b672827b7d1f08db24bda8744}\label{class_bird_a9e32af9b672827b7d1f08db24bda8744} 
+bool {\bfseries can\+Fly\_}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_animal}{Animal}}}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string {\bfseries name\_}
+\item 
+std::\+string {\bfseries species\_}
+\item 
+int {\bfseries age\_}
+\item 
+\doxymbox{\hyperlink{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48}{Kind}} {\bfseries kind\_}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \doxymbox{\hyperlink{class_animal}{Animal}}}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48}\label{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48} 
+enum class \doxymbox{\hyperlink{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48}{Kind}} \{ \newline
+{\bfseries Lion} = 0
+, {\bfseries Elephant} = 1
+, {\bfseries Parrot} = 2
+, {\bfseries Bat} = 3
+, \newline
+{\bfseries Count} = 4
+ \}
+\begin{DoxyCompactList}\small\item\em Перечисление типов животных. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \doxymbox{\hyperlink{class_animal}{Animal}}}
+\begin{DoxyCompactItemize}
+\item 
+static std::\+size\+\_\+t {\bfseries get\+Total\+Count} () noexcept
+\item 
+static std::\+size\+\_\+t {\bfseries get\+Count\+By\+Type} (\doxymbox{\hyperlink{class_animal_abd6bed3bf6361cc3dc37c03f297e3f48}{Kind}} kind) noexcept
+\item 
+static \doxymbox{\hyperlink{class_animal}{Animal}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Oldest\+Animal} () noexcept
+\begin{DoxyCompactList}\small\item\em Находит самое старое живое животное. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс птиц. 
+
+Наследуется от \doxylink{class_animal}{Animal} и хранит информацию о размахе крыльев и способности летать. 
+
+\label{class_bird_doc-func-members}
+\Hypertarget{class_bird_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_bird_a39d9b1852efe483a2e177fe50ed24a8c}\index{Bird@{Bird}!showBehavior@{showBehavior}}
+\index{showBehavior@{showBehavior}!Bird@{Bird}}
+\doxysubsubsection{\texorpdfstring{showBehavior()}{showBehavior()}}
+{\footnotesize\ttfamily \label{class_bird_a39d9b1852efe483a2e177fe50ed24a8c} 
+void Bird::\+show\+Behavior (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Выводит особенности поведения птицы. 
+
+
+
+Reimplemented from \doxymbox{\hyperlink{class_animal_a904f00002708998c540fe3f87e611ef2}{Animal}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_parrot_a2bb1a9dec4173a753c7af0b6d9efa658}{Parrot}}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Bird.\+h\item 
+\doxymbox{\hyperlink{_bird_8cpp}{Bird.\+cpp}}\end{DoxyCompactItemize}

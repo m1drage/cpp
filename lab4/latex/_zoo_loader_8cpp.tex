@@ -1,0 +1,27 @@
+\doxysection{Zoo\+Loader.\+cpp File Reference}
+\hypertarget{_zoo_loader_8cpp}{}\label{_zoo_loader_8cpp}\index{ZooLoader.cpp@{ZooLoader.cpp}}
+
+
+Реализация загрузчика животных.  
+
+
+{\ttfamily \+\#include "{}Zoo\+Loader.\+h"{}}\newline
+{\ttfamily \+\#include "{}Lion.\+h"{}}\newline
+{\ttfamily \+\#include "{}Elephant.\+h"{}}\newline
+{\ttfamily \+\#include "{}Parrot.\+h"{}}\newline
+{\ttfamily \+\#include "{}Bat.\+h"{}}\newline
+{\ttfamily \+\#include $<$fstream$>$}\newline
+{\ttfamily \+\#include $<$sstream$>$}\newline
+{\ttfamily \+\#include $<$stdexcept$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_zoo_loader_8cpp_a02133954efb189ede684ffd78f2ef904}\label{_zoo_loader_8cpp_a02133954efb189ede684ffd78f2ef904} 
+std::\+vector$<$ std::\+unique\+\_\+ptr$<$ \doxymbox{\hyperlink{class_animal}{Animal}} $>$ $>$ {\bfseries load\+Animals\+From\+File} (const std::\+string \&filename)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Реализация загрузчика животных. 
+
+Читает данные из файла и создаёт объекты соответствующих классов животных. 
