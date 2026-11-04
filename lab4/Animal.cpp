@@ -1,3 +1,10 @@
+/**
+ * @file Animal.cpp
+ * @brief Реализация базового класса Animal.
+ * @details Содержит конструкторы, деструктор, методы подсчёта
+ * животных и регистрацию созданных объектов.
+ */
+
 #include "Animal.h"
 #include <algorithm>
 #include <ostream>

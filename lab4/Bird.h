@@ -1,6 +1,12 @@
 #pragma once
 #include "Animal.h"
 
+/**
+ * @brief Класс птиц.
+ * @details Наследуется от Animal и хранит информацию
+ * о размахе крыльев и способности летать.
+ */
+
 class Bird : virtual public Animal {
 public:
     Bird(const std::string& name, const std::string& species, int age,

@@ -1,3 +1,10 @@
+/**
+ * @file Lion.cpp
+ * @brief Реализация класса Lion.
+ * @details Содержит реализацию звуков, передвижения
+ * и поведения льва.
+ */
+
 #include "Lion.h"
 #include <iostream>
 

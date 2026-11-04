@@ -1,3 +1,10 @@
+/**
+ * @file Elephant.cpp
+ * @brief Реализация класса Elephant.
+ * @details Содержит реализацию звуков, передвижения
+ * и поведения слона.
+ */
+
 #include "Elephant.h"
 #include <iostream>
 

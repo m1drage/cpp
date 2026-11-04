@@ -1,6 +1,12 @@
 #pragma once
 #include "Animal.h"
 
+/**
+ * @brief Класс млекопитающих.
+ * @details Наследуется от Animal и содержит дополнительные
+ * характеристики млекопитающих.
+ */
+
 class Mammal : virtual public Animal {
 public:
     Mammal(const std::string& name, const std::string& species, int age,

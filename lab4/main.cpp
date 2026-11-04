@@ -1,3 +1,10 @@
+/**
+ * @file main.cpp
+ * @brief Главная программа лабораторной работы.
+ * @details Демонстрирует работу классов животных,
+ * наследование, полиморфизм и подсчёт статистики.
+ */
+
 #include "ZooLoader.h"
 #include "Lion.h"
 #include "Elephant.h"
@@ -8,7 +15,7 @@
 #include <vector>
 #include <stdexcept>
 
-// Friend function operator<< is declared in Animal.
+
 static void printStatistics() {
     using K = Animal::Kind;
     std::cout << "\n--- Animal statistics ---\n"
@@ -27,7 +34,7 @@ int main(int argc, char* argv[]) {
 
         std::cout << "Objects loaded from file: " << animals.size() << "\n\n";
 
-        // Polymorphism: virtual calls through an Animal* pointer.
+        
         std::cout << "--- Polymorphic behavior ---\n";
         for (const auto& animal : animals) {
             std::cout << *animal << '\n';
@@ -37,12 +44,12 @@ int main(int argc, char* argv[]) {
             std::cout << "-----------------------------\n";
         }
 
-        // Enclosure: an array of pointers to the base class.
+        
         std::vector<Animal*> enclosure;
         for (const auto& animal : animals) enclosure.push_back(animal.get());
         std::cout << "\nAnimals in enclosure: " << enclosure.size() << " animals.\n";
 
-        // Test Bat multiple and virtual inheritance.
+        
         for (Animal* animal : enclosure) {
             if (auto* bat = dynamic_cast<Bat*>(animal)) {
                 Mammal* mammalPart = bat;
@@ -57,11 +64,11 @@ int main(int argc, char* argv[]) {
             }
         }
 
-        // Copying and assignment. std::string values are copied independently.
+        
         std::cout << "\n--- Copy test ---\n";
         Lion original("TestLion", 8, 110, true);
-        Lion copied(original);                  // copy constructor
-        copied = Lion("OtherLion", 5, 105, false); // assignment operator
+        Lion copied(original);                  
+        copied = Lion("OtherLion", 5, 105, false); 
         std::cout << "Original: " << original << '\n';
         std::cout << "Copy after modification: " << copied << '\n';
         std::cout << "Independent strings: "
@@ -72,7 +79,7 @@ int main(int argc, char* argv[]) {
         batCopy = batOriginal;
         std::cout << "Bat copy: " << batCopy << '\n';
 
-        // Static method that finds the oldest living object.
+        
         Animal* oldest = Animal::getOldestAnimal();
         if (oldest) std::cout << "\nOldest animal: " << *oldest << '\n';
 

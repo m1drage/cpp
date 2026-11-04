@@ -1,3 +1,10 @@
+/**
+ * @file ZooLoader.cpp
+ * @brief Реализация загрузчика животных.
+ * @details Читает данные из файла и создаёт объекты
+ * соответствующих классов животных.
+ */
+
 #include "ZooLoader.h"
 #include "Lion.h"
 #include "Elephant.h"

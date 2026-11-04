@@ -1,3 +1,10 @@
+/**
+ * @file Bat.cpp
+ * @brief Реализация класса Bat.
+ * @details Содержит реализацию множественного наследования,
+ * звуков и передвижения летучей мыши.
+ */
+
 #include "Bat.h"
 #include <iostream>
 
@@ -12,7 +19,7 @@ Bat::Bat(const Bat& other)
 
 Bat& Bat::operator=(const Bat& other) {
     if (this != &other) {
-        // Assigning the virtual Animal base twice is safe: both paths copy identical values.
+        
         Mammal::operator=(other);
         Bird::operator=(other);
     }

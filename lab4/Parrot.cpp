@@ -1,3 +1,10 @@
+/**
+ * @file Parrot.cpp
+ * @brief Реализация класса Parrot.
+ * @details Содержит реализацию звуков, передвижения
+ * и поведения попугая.
+ */
+
 #include "Parrot.h"
 #include <iostream>
 

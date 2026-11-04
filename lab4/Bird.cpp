@@ -1,3 +1,9 @@
+/**
+ * @file Bird.cpp
+ * @brief Реализация класса Bird.
+ * @details Содержит конструкторы и методы работы
+ * с характеристиками птиц.
+ */
 #include "Bird.h"
 #include <cmath>
 #include <iostream>

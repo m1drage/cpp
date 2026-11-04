@@ -1,3 +1,9 @@
+/**
+ * @file Mammal.cpp
+ * @brief Реализация класса Mammal.
+ * @details Содержит конструкторы и методы работы
+ * с характеристиками млекопитающих.
+ */
 #include "Mammal.h"
 #include <iostream>
 #include <stdexcept>
