@@ -1,0 +1,11 @@
+# type|name|age|gestationPeriod|nursing|wingspan|canFly
+Lion|Simba|8|110|1|0|0
+Lion|Nala|6|110|1|0|0
+Lion|Mufasa|14|110|0|0|0
+Elephant|Dumbo|12|660|1|0|0
+Elephant|Ellie|25|660|1|0|0
+Elephant|Bruno|31|660|0|0|0
+Parrot|Kesha|5|0|0|0.45|1
+Parrot|Ara|9|0|0|1.10|1
+Parrot|Rico|3|0|0|0.35|1
+Bat|Betty|7|50|1|0.40|1
