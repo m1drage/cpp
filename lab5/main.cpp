@@ -3,10 +3,19 @@
 #include <array>
 #include <fstream>
 #include <type_traits>
-#include <Windows.h>
+#include <windows.h>
+
 using namespace std;
 
-// Шаблонный класс для хранения облака точек
+/**
+ * @brief Шаблонный класс для хранения облака точек.
+ *
+ * Класс позволяет хранить координаты точек
+ * в двумерном или трёхмерном пространстве.
+ *
+ * @tparam T Тип данных координат.
+ * @tparam Dimensions Количество измерений.
+ */
 template <typename T, int Dimensions>
 class PointCloud {
 
@@ -18,40 +27,62 @@ class PointCloud {
 
 private:
 
-    // Хранение точек
+    /**
+     * @brief Контейнер для хранения точек.
+     */
     vector<array<T, Dimensions>> points;
 
-    // Общее количество точек
+    /**
+     * @brief Общее количество добавленных точек.
+     */
     static int totalPoints;
 
-    // Дружественная функция
+    /**
+     * @brief Дружественная функция для вывода точек.
+     * @param cloud Облако точек.
+     */
     template <typename U, int D>
     friend void showCloud(const PointCloud<U, D>& cloud);
 
 public:
 
-    // Добавление точки
+    /**
+     * @brief Добавляет новую точку в облако.
+     * @param point Массив координат точки.
+     */
     void addPoint(array<T, Dimensions> point) {
         points.push_back(point);
         totalPoints++;
     }
 
-    // Получение количества точек
+    /**
+     * @brief Возвращает количество точек.
+     * @return Количество точек в облаке.
+     */
     int getSize() const {
         return points.size();
     }
 
-    // Получение общего количества точек
+    /**
+     * @brief Возвращает общее количество точек.
+     * @return Общее количество точек.
+     */
     static int getTotalPoints() {
         return totalPoints;
     }
 
-    // Получение точки по номеру
+    /**
+     * @brief Возвращает точку по индексу.
+     * @param index Индекс точки.
+     * @return Массив координат.
+     */
     array<T, Dimensions> getPoint(int index) const {
         return points[index];
     }
 
-    // Вывод точек
+    /**
+     * @brief Выводит все точки облака.
+     */
     void print() const {
         for (int i = 0; i < points.size(); i++) {
             cout << "Точка " << i + 1 << ": ";
@@ -65,11 +96,16 @@ public:
     }
 };
 
-// Инициализация счётчика
+/**
+ * @brief Инициализация статического счётчика точек.
+ */
 template <typename T, int Dimensions>
 int PointCloud<T, Dimensions>::totalPoints = 0;
 
-// Специализация для трёхмерного пространства
+/**
+ * @brief Частичная специализация класса для трёхмерного пространства.
+ * @tparam T Тип координат.
+ */
 template <typename T>
 class PointCloud<T, 3> {
 
@@ -78,40 +114,50 @@ class PointCloud<T, 3> {
 
 private:
 
-    // Хранение трёхмерных точек
+    /// Контейнер для хранения трёхмерных точек.
     vector<array<T, 3>> points;
 
-    // Общее количество точек
+    /// Общее количество трёхмерных точек.
     static int totalPoints;
 
-    // Дружественная функция
     template <typename U, int D>
     friend void showCloud(const PointCloud<U, D>& cloud);
 
 public:
 
-    // Добавление точки
+    /**
+     * @brief Добавляет трёхмерную точку.
+     * @param point Массив из трёх координат.
+     */
     void addPoint(array<T, 3> point) {
         points.push_back(point);
         totalPoints++;
     }
 
-    // Получение количества точек
+    /**
+     * @brief Возвращает количество точек.
+     */
     int getSize() const {
         return points.size();
     }
 
-    // Получение общего количества точек
+    /**
+     * @brief Возвращает общее количество точек.
+     */
     static int getTotalPoints() {
         return totalPoints;
     }
 
-    // Получение точки
+    /**
+     * @brief Получает точку по индексу.
+     */
     array<T, 3> getPoint(int index) const {
         return points[index];
     }
 
-    // Вывод точек
+    /**
+     * @brief Выводит трёхмерные точки.
+     */
     void print() const {
         for (int i = 0; i < points.size(); i++) {
             cout << "Точка " << i + 1 << ": ";
@@ -124,22 +170,33 @@ public:
         }
     }
 
-    // Вычисление векторного произведения
+    /**
+     * @brief Вычисляет векторное произведение двух векторов.
+     * @param a Первый вектор.
+     * @param b Второй вектор.
+     * @return Результат векторного произведения.
+     */
     array<T, 3> crossProduct(array<T, 3> a, array<T, 3> b) {
         return {
             a[1] * b[2] - a[2] * b[1],
             a[2] * b[0] - a[0] * b[2],
-            a[0] * b[1] - a[1] * b[0]
-        };
+            a[0] * b[1] - a[1] * b[0] };
     }
 };
 
-// Инициализация счётчика для 3D
+/**
+ * @brief Инициализация счётчика для трёхмерного облака.
+ */
 template <typename T>
 int PointCloud<T, 3>::totalPoints = 0;
 
-// Первая глобальная шаблонная функция
-// Вычисление центроида облака
+/**
+ * @brief Вычисляет центроид облака точек.
+ * @tparam T Тип координат.
+ * @tparam Dimensions Количество измерений.
+ * @param cloud Облако точек.
+ * @return Массив координат центроида.
+ */
 template <typename T, int Dimensions>
 array<double, Dimensions> calculateCentroid(
     const PointCloud<T, Dimensions>& cloud) {
@@ -150,7 +207,6 @@ array<double, Dimensions> calculateCentroid(
         return center;
     }
 
-    // Суммирование координат
     for (int i = 0; i < cloud.getSize(); i++) {
         auto point = cloud.getPoint(i);
 
@@ -159,7 +215,6 @@ array<double, Dimensions> calculateCentroid(
         }
     }
 
-    // Вычисление среднего значения
     for (int j = 0; j < Dimensions; j++) {
         center[j] /= cloud.getSize();
     }
@@ -167,8 +222,12 @@ array<double, Dimensions> calculateCentroid(
     return center;
 }
 
-// Вторая глобальная шаблонная функция
-// Вывод центроида
+/**
+ * @brief Выводит координаты центроида.
+ * @tparam T Тип координат.
+ * @tparam Dimensions Количество измерений.
+ * @param cloud Облако точек.
+ */
 template <typename T, int Dimensions>
 void printCentroid(const PointCloud<T, Dimensions>& cloud) {
 
@@ -183,10 +242,10 @@ void printCentroid(const PointCloud<T, Dimensions>& cloud) {
     cout << endl;
 }
 
-// Явная специализация
-
-
-//функции для целых чисел
+/**
+ * @brief Специализация вывода центроида для целых чисел в 2D.
+ * @param cloud Двумерное облако точек.
+ */
 template <>
 void printCentroid<int, 2>(const PointCloud<int, 2>& cloud) {
 
@@ -201,7 +260,12 @@ void printCentroid<int, 2>(const PointCloud<int, 2>& cloud) {
     cout << endl;
 }
 
-// Дружественная функция для вывода точек
+/**
+ * @brief Дружественная функция для вывода закрытых данных.
+ * @tparam T Тип координат.
+ * @tparam Dimensions Количество измерений.
+ * @param cloud Облако точек.
+ */
 template <typename T, int Dimensions>
 void showCloud(const PointCloud<T, Dimensions>& cloud) {
 
@@ -218,14 +282,23 @@ void showCloud(const PointCloud<T, Dimensions>& cloud) {
     }
 }
 
+/**
+ * @brief Главная функция программы.
+ *
+ * Загружает точки из файла, вычисляет центроид,
+ * выполняет векторное произведение и сохраняет результат.
+ * @return Код завершения программы.
+ */
 int main() {
+
+    // Настройка русского языка в консоли Windows
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    // Создание трёхмерного облака
+    /// Создание трёхмерного облака.
     PointCloud<double, 3> cloud;
 
-    // Открытие файла с исходными данными
+    /// Открытие файла с исходными данными.
     ifstream file("points.txt");
 
     if (!file.is_open()) {
@@ -233,9 +306,9 @@ int main() {
         return 1;
     }
 
-    // Чтение десяти точек из файла
     double x, y, z;
 
+    /// Чтение точек из файла.
     while (file >> x >> y >> z) {
         cloud.addPoint({x, y, z});
     }
@@ -245,13 +318,13 @@ int main() {
     cout << "Количество загруженных точек: "
          << cloud.getSize() << endl;
 
-    // Вывод всех точек
+    /// Вывод всех точек.
     showCloud(cloud);
 
-    // Вычисление центроида
+    /// Вычисление центроида.
     printCentroid(cloud);
 
-    // Вычисление векторного произведения
+    /// Вычисление векторного произведения.
     if (cloud.getSize() >= 2) {
         auto result = cloud.crossProduct(
             cloud.getPoint(0),
@@ -267,21 +340,20 @@ int main() {
         cout << endl;
     }
 
-    // Вывод общего количества точек
     cout << "Всего точек: "
          << PointCloud<double, 3>::getTotalPoints()
          << endl;
 
-    // Проверка двумерного облака
+    /// Создание двумерного облака.
     PointCloud<int, 2> cloud2D;
 
     cloud2D.addPoint({2, 4});
     cloud2D.addPoint({6, 8});
 
-    // Проверка специализации функции
+    /// Проверка специализации функции.
     printCentroid(cloud2D);
 
-    // Сохранение загруженных точек в файл
+    /// Сохранение точек в файл.
     ofstream output("result.txt");
 
     for (int i = 0; i < cloud.getSize(); i++) {
@@ -294,7 +366,9 @@ int main() {
 
     output.close();
 
-    cout << "Результаты сохранены в result.txt" << endl;
-
+    cout << "Результаты сохранены в result.tx" << endl;
     return 0;
-} 
+}
+
+
+

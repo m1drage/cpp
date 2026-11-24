@@ -1,0 +1,55 @@
+@startuml main.cpp
+
+skinparam classAttributeIconSize 0
+
+class "PointCloud<T, Dimensions>" as PointCloud {
+    - points: vector<array<T, Dimensions>>
+    - totalPoints: static int
+
+    + addPoint(point: array<T, Dimensions>): void
+    + getSize(): int
+    + getTotalPoints(): int
+    + getPoint(index: int): array<T, Dimensions>
+    + print(): void
+    + crossProduct(a: array<T, 3>, b: array<T, 3>): array<T, 3>
+}
+
+class "PointCloud<T, 3>" as PointCloud3 {
+    - points: vector<array<T, 3>>
+    - totalPoints: static int
+
+    + addPoint(point: array<T, 3>): void
+    + getSize(): int
+    + getTotalPoints(): int
+    + getPoint(index: int): array<T, 3>
+    + print(): void
+    + crossProduct(a: array<T, 3>, b: array<T, 3>): array<T, 3>
+}
+
+class "Глобальные функции" as Functions {
+    + calculateCentroid<T, D>(cloud): array<double, D>
+    + printCentroid<T, D>(cloud): void
+    + showCloud<T, D>(cloud): void
+}
+
+PointCloud3 --|> PointCloud : специализация
+
+note right of PointCloud
+    T — тип координат
+    Dimensions — количество измерений
+    Ограничение: только числовые типы
+end note
+
+note right of PointCloud3
+    Специализация для 3D
+    Дополнительно реализует
+    векторное произведение
+end note
+
+note bottom of Functions
+    calculateCentroid — вычисление центроида
+    printCentroid — вывод центроида
+    showCloud — дружественная функция
+end note
+
+@enduml
