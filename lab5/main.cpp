@@ -9,25 +9,34 @@ using namespace std;
 template <typename T, int Dimensions>
 class PointCloud {
 
-    // Проверка допустимости типа данных
     static_assert(is_arithmetic<T>::value, "Разрешены только числовые типы");
 
-    // Проверка количества измерений
     static_assert(Dimensions > 0, "Количество измерений должно быть больше нуля");
 
 private:
+
     // Хранение всех точек облака
     vector<array<T, Dimensions>> points;
 
+    // Общее количество точек во всех облаках
+    static int totalPoints;
+
 public:
+
     // Добавление новой точки
     void addPoint(array<T, Dimensions> point) {
         points.push_back(point);
+        totalPoints++;
     }
 
-    // Получение количества точек
+    // Получение количества точек в облаке
     int getSize() const {
         return points.size();
+    }
+
+    // Получение общего количества точек
+    static int getTotalPoints() {
+        return totalPoints;
     }
 
     // Вывод всех точек
@@ -44,9 +53,11 @@ public:
     }
 };
 
+// Инициализация статического счётчика
+template <typename T, int Dimensions>
+int PointCloud<T, Dimensions>::totalPoints = 0;
+
 int main() {
 
     return 0;
 }
-
-
