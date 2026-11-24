@@ -3,7 +3,7 @@
 #include <array>
 #include <fstream>
 #include <type_traits>
-
+#include <Windows.h>
 using namespace std;
 
 // Шаблонный класс для хранения облака точек
@@ -219,6 +219,8 @@ void showCloud(const PointCloud<T, Dimensions>& cloud) {
 }
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
 
     // Создание трёхмерного облака
     PointCloud<double, 3> cloud;
